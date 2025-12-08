@@ -1,0 +1,47 @@
+{
+  "name": "git-mirror",
+  "version": "1.0.0",
+  "description": "Import public and private repos directly in Node.js.",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node dist",
+    "build": "tsc",
+    "test": "tsx src/index.ts",
+    "clear": "rm -rf dist",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'tsx' src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CascadesRoblox/git-mirror.git"
+  },
+  "keywords": [
+    "mirror",
+    "git",
+    "github",
+    "repo",
+    "public",
+    "private",
+    "org",
+    "organization",
+    "clone",
+    "sync"
+  ],
+  "author": "Cascades Corporation",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CascadesRoblox/git-mirror/issues"
+  },
+  "homepage": "https://github.com/CascadesRoblox/git-mirror#readme",
+  "dependencies": {
+    "simple-git": "^3.30.0",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.10.1",
+    "nodemon": "^3.1.11",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
