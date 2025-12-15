@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Token Prompt</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.8.1/github-markdown.min.css">
+</head>
+<body class="markdown-body">
+    <h1>Create a Token</h1>
+    <ol>
+        <li>Please sign in with your GitHub account.</li>
+        <li>Set the note to something along the lines of <b>"git-mirror Token."</b></li>
+        <li>For hobby projects, set the expiration date to a set amount, otherwise it is recommended to set it to never expire (not as safe if it gets leaked).</li>
+        <li>Make sure you click the following permissions: <code>repo</code>, <code>admin:org</code> (required for organization repos).</li>
+        <li>Press create and enter the token given by GitHub below.</li>
+        <li>Press <b>Enter</b>.</li>
+    </ol>
+    <label for="token">Token:</label>
+    <input type="password" id="token" placeholder="Enter your token here">
+    <br>
+    <button onclick="postMessage(document.querySelector('#token').value)">Enter</button>
+    <hr>
+    <button onclick="postMessage('close')">Close</button>
+
+    <script>
+        addEventListener("beforeunload", () => {
+            postMessage("close");
+        })
+    </script>
+</body>
+</html>
