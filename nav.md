@@ -1,1 +1,1 @@
-**Pages:** [README.md](/) | [License](/license) | [Token Creator](/token)
+**Pages:** [README.md](/git-mirror) | [License](/git-mirror/license) | [Token Creator](/git-mirror/token)
