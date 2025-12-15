@@ -93,7 +93,7 @@ async function fetchNav() {
         return converter.makeHtml(sessionStorage.getItem("nav")) + "<br>";
     }
 
-    const response = await (await fetch("/nav.md")).text();
+    const response = await (await fetch("../nav.md")).text();
 
     sessionStorage.setItem("nav", response);
     
